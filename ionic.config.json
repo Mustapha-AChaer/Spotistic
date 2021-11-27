@@ -1,0 +1,7 @@
+{
+  "name": "Spotistic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
