@@ -1,0 +1,26 @@
+@import "../global.scss";
+
+.buttons {
+  @include centerFlex;
+  flex-direction: column;
+  width: 100%;
+
+  .full-button {
+    width: 100%;
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    img {
+      width: 10rem;
+      height: 10rem;
+      align-self: flex-start;
+    }
+    p {
+      padding: 2rem 1rem;
+    }
+  }
+}
