@@ -1,0 +1,24 @@
+@import "../global.scss";
+
+.main-div {
+  height: 100%;
+  background-image: url(../assets/images/page2.jpg);
+  background-size: cover;
+  padding: 2.5rem 1rem;
+  @include centerFlex;
+  flex-direction: column;
+
+  .details {
+    flex: 3;
+    img {
+      height: 15rem;
+      width: 15rem;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+  }
+
+  .list {
+    flex: 7;
+  }
+}

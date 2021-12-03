@@ -11,5 +11,14 @@
         <li h>h</li>
       </ul>
     </label>
+    <div class="singers">
+      <button
+        *ngFor="let singer of singers"
+        (click)="sendWithQuery(singer.name, singer.imgurl)"
+      >
+        <img [src]="singer.imgurl" alt="artistImage" class="img" />
+        <h3 class="name">{{singer.name}}</h3>
+      </button>
+    </div>
   </div>
 </ion-content>
