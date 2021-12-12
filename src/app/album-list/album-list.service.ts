@@ -8,13 +8,18 @@ export interface Album{
 export interface ArtistName{
   artistName: string
 }
+
+export interface AlbumSongs{
+  songName: string
+}
 @Injectable({
   providedIn: 'root'
 })
 export class AlbumListService {
 
   private artist: ArtistName;
-  private base_url ='http://localhost/FinalMobileProject/getAllAlbums.php'
+  private album: Album;
+  private base_url ='http://localhost/FinalMobileProject/'
 
   constructor(private http : HttpClient) { }
 
@@ -22,7 +27,14 @@ export class AlbumListService {
     this.artist = {
       artistName: naming
     }
-    return this.http.post<[Album]>(this.base_url, this.artist);
+    return this.http.post<[Album]>(this.base_url + "getAllAlbums.php", this.artist);
+  }
+
+  getAllAlbumSongs(albName: string){
+    this.album = {
+      albumName : albName
+    }
+    return this.http.post<[AlbumSongs]>(this.base_url + "getAllAlbumSongs.php", this.album);
   }
  
 }

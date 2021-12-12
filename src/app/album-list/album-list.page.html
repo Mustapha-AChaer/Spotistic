@@ -3,13 +3,19 @@
     <img src="{{imgUrl}}" alt="" />
     <h2 id="h2">{{name}}</h2>
   </div>
-  <div class="list">
+  <div class="list" id="list">
     <button
+      class="press"
       *ngFor="let album of albums"
-      (click)="sendWithQuery(singer.name, singer.imgurl)"
+      (click)="getAlbumSongs(album.albumName)"
     >
       <!-- <img [src]="singer.imgurl" alt="artistImage" class="img" /> -->
       <h3 class="name">{{album.albumName}}</h3>
     </button>
+  </div>
+  <div class="list" id="list2" style="display: none">
+    <div class="press" *ngFor="let song of albumSongs">
+      <h3 class="name">{{song.songName}}</h3>
+    </div>
   </div>
 </div>

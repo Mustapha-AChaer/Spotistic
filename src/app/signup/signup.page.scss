@@ -7,4 +7,9 @@
   background-color: #e6cb00e3;
   @include centerFlex;
   background-image: url(../../assets/images/loginBackground.png);
+
+  form {
+    @include centerFlex;
+    flex-direction: column;
+  }
 }
