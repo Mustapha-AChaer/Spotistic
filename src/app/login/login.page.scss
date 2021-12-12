@@ -9,3 +9,12 @@
 
 /////////////////////////////////
 @import "../../components/formBox.scss";
+
+.form {
+  @include centerFlex;
+  flex-direction: column;
+}
+
+.btn {
+  margin: 2rem 0rem;
+}

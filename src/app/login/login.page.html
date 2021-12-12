@@ -3,17 +3,23 @@
 <ion-content>
   <div class="main_container">
     <div class="box">
-      <h1>Log In</h1>
-      <label for="email">
-        <p>Email:</p>
-        <input type="email" id="email" />
-      </label>
-      <label for="password"
-        ><p>Password:</p>
-        <input type="password" id="password" />
-      </label>
-      <button class="btn" routerLink="/main-page">Login</button>
-      <a routerLink="/signup"><p>Create an account</p></a>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form">
+        <h1>Log In</h1>
+        <label for="email">
+          <p>Email:</p>
+          <input ngModel name="email" type="email" id="email" />
+        </label>
+        <label for="password"
+          ><p>Password:</p>
+          <input ngModel name="password" type="password" id="password" />
+        </label>
+        <p style="color: red; visibility: hidden; margin: 1rem 0rem" id="error">
+          Email and Password do not match
+        </p>
+        <button type="submit" class="btn">Login</button>
+
+        <a routerLink="/signup"><p>Create an account</p></a>
+      </form>
     </div>
   </div>
 </ion-content>
